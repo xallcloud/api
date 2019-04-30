@@ -2,16 +2,17 @@ syntax = "proto3";
 
 package proto;
 
-
-enum CallpointState {
-    Inactive = 0;
-    Active = 1;
-}
-
-message CallpointEvent {
-  string cpId = 1; // Unique auto generated ID
-  string PathID = 2; // Unique friendly Path ID: ex: ./SiteABC/department/location/patientcall12345
-  string Label = 3; // Friendly label/mame
-  string Description = 4;
-  CallpointState State = 5;
+message Callpoint {
+  // Common Types
+  string CpId  = 1;
+  string Label = 2;
+  int32  Type  = 3;
+  string Icon  = 4;
+  
+  // Specific types
+  string AbsAddress = 20;   
+  int32  Priority   = 21;
+  
+  // More Generic Types
+  string Description = 40;
 }

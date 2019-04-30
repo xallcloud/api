@@ -20,122 +20,114 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-type CallpointState int32
-
-const (
-	CallpointState_Inactive CallpointState = 0
-	CallpointState_Active   CallpointState = 1
-)
-
-var CallpointState_name = map[int32]string{
-	0: "Inactive",
-	1: "Active",
+type Callpoint struct {
+	// Common Types
+	CpId  string `protobuf:"bytes,1,opt,name=CpId,json=cpId,proto3" json:"CpId,omitempty"`
+	Label string `protobuf:"bytes,2,opt,name=Label,json=label,proto3" json:"Label,omitempty"`
+	Type  int32  `protobuf:"varint,3,opt,name=Type,json=type,proto3" json:"Type,omitempty"`
+	Icon  string `protobuf:"bytes,4,opt,name=Icon,json=icon,proto3" json:"Icon,omitempty"`
+	// Specific types
+	AbsAddress string `protobuf:"bytes,20,opt,name=AbsAddress,json=absAddress,proto3" json:"AbsAddress,omitempty"`
+	Priority   int32  `protobuf:"varint,21,opt,name=Priority,json=priority,proto3" json:"Priority,omitempty"`
+	// More Generic Types
+	Description          string   `protobuf:"bytes,40,opt,name=Description,json=description,proto3" json:"Description,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
 }
 
-var CallpointState_value = map[string]int32{
-	"Inactive": 0,
-	"Active":   1,
-}
-
-func (x CallpointState) String() string {
-	return proto.EnumName(CallpointState_name, int32(x))
-}
-
-func (CallpointState) EnumDescriptor() ([]byte, []int) {
+func (m *Callpoint) Reset()         { *m = Callpoint{} }
+func (m *Callpoint) String() string { return proto.CompactTextString(m) }
+func (*Callpoint) ProtoMessage()    {}
+func (*Callpoint) Descriptor() ([]byte, []int) {
 	return fileDescriptor_0966319cfc7f9517, []int{0}
 }
 
-type CallpointEvent struct {
-	CpId                 string         `protobuf:"bytes,1,opt,name=cpId,proto3" json:"cpId,omitempty"`
-	PathID               string         `protobuf:"bytes,2,opt,name=PathID,json=pathID,proto3" json:"PathID,omitempty"`
-	Label                string         `protobuf:"bytes,3,opt,name=Label,json=label,proto3" json:"Label,omitempty"`
-	Description          string         `protobuf:"bytes,4,opt,name=Description,json=description,proto3" json:"Description,omitempty"`
-	State                CallpointState `protobuf:"varint,5,opt,name=State,json=state,proto3,enum=proto.CallpointState" json:"State,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
-	XXX_unrecognized     []byte         `json:"-"`
-	XXX_sizecache        int32          `json:"-"`
+func (m *Callpoint) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Callpoint.Unmarshal(m, b)
+}
+func (m *Callpoint) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Callpoint.Marshal(b, m, deterministic)
+}
+func (m *Callpoint) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Callpoint.Merge(m, src)
+}
+func (m *Callpoint) XXX_Size() int {
+	return xxx_messageInfo_Callpoint.Size(m)
+}
+func (m *Callpoint) XXX_DiscardUnknown() {
+	xxx_messageInfo_Callpoint.DiscardUnknown(m)
 }
 
-func (m *CallpointEvent) Reset()         { *m = CallpointEvent{} }
-func (m *CallpointEvent) String() string { return proto.CompactTextString(m) }
-func (*CallpointEvent) ProtoMessage()    {}
-func (*CallpointEvent) Descriptor() ([]byte, []int) {
-	return fileDescriptor_0966319cfc7f9517, []int{0}
-}
+var xxx_messageInfo_Callpoint proto.InternalMessageInfo
 
-func (m *CallpointEvent) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_CallpointEvent.Unmarshal(m, b)
-}
-func (m *CallpointEvent) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_CallpointEvent.Marshal(b, m, deterministic)
-}
-func (m *CallpointEvent) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CallpointEvent.Merge(m, src)
-}
-func (m *CallpointEvent) XXX_Size() int {
-	return xxx_messageInfo_CallpointEvent.Size(m)
-}
-func (m *CallpointEvent) XXX_DiscardUnknown() {
-	xxx_messageInfo_CallpointEvent.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_CallpointEvent proto.InternalMessageInfo
-
-func (m *CallpointEvent) GetCpId() string {
+func (m *Callpoint) GetCpId() string {
 	if m != nil {
 		return m.CpId
 	}
 	return ""
 }
 
-func (m *CallpointEvent) GetPathID() string {
-	if m != nil {
-		return m.PathID
-	}
-	return ""
-}
-
-func (m *CallpointEvent) GetLabel() string {
+func (m *Callpoint) GetLabel() string {
 	if m != nil {
 		return m.Label
 	}
 	return ""
 }
 
-func (m *CallpointEvent) GetDescription() string {
+func (m *Callpoint) GetType() int32 {
+	if m != nil {
+		return m.Type
+	}
+	return 0
+}
+
+func (m *Callpoint) GetIcon() string {
+	if m != nil {
+		return m.Icon
+	}
+	return ""
+}
+
+func (m *Callpoint) GetAbsAddress() string {
+	if m != nil {
+		return m.AbsAddress
+	}
+	return ""
+}
+
+func (m *Callpoint) GetPriority() int32 {
+	if m != nil {
+		return m.Priority
+	}
+	return 0
+}
+
+func (m *Callpoint) GetDescription() string {
 	if m != nil {
 		return m.Description
 	}
 	return ""
 }
 
-func (m *CallpointEvent) GetState() CallpointState {
-	if m != nil {
-		return m.State
-	}
-	return CallpointState_Inactive
-}
-
 func init() {
-	proto.RegisterType((*CallpointEvent)(nil), "proto.CallpointEvent")
-	proto.RegisterEnum("proto.CallpointState", CallpointState_name, CallpointState_value)
+	proto.RegisterType((*Callpoint)(nil), "proto.Callpoint")
 }
 
 func init() { proto.RegisterFile("callpoints.proto", fileDescriptor_0966319cfc7f9517) }
 
 var fileDescriptor_0966319cfc7f9517 = []byte{
-	// 194 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x4c, 0x8e, 0x4f, 0x4a, 0xc7, 0x30,
-	0x10, 0x85, 0x8d, 0xfe, 0x12, 0x74, 0x2a, 0xa5, 0x0c, 0x2a, 0x59, 0x16, 0x57, 0xa5, 0x42, 0x17,
-	0x7a, 0x02, 0xb1, 0x2e, 0x0a, 0x2e, 0xa4, 0x9e, 0x20, 0x4d, 0x03, 0x06, 0x42, 0x12, 0xda, 0xa1,
-	0xf7, 0xf1, 0xa6, 0xd2, 0x29, 0xfe, 0x59, 0xcd, 0x7b, 0xef, 0x83, 0xe1, 0x83, 0xca, 0x9a, 0x10,
-	0x72, 0xf2, 0x91, 0xd6, 0x2e, 0x2f, 0x89, 0x12, 0x4a, 0x3e, 0xf7, 0x5f, 0x02, 0xca, 0x97, 0x1f,
-	0xf6, 0xba, 0xb9, 0x48, 0x88, 0x70, 0xb2, 0x79, 0x98, 0xb5, 0xa8, 0x45, 0x73, 0x35, 0x72, 0xc6,
-	0x3b, 0x50, 0xef, 0x86, 0x3e, 0x87, 0x5e, 0x9f, 0xf3, 0xaa, 0x32, 0x37, 0xbc, 0x01, 0xf9, 0x66,
-	0x26, 0x17, 0xf4, 0x05, 0xcf, 0x32, 0xec, 0x05, 0x6b, 0x28, 0x7a, 0xb7, 0xda, 0xc5, 0x67, 0xf2,
-	0x29, 0xea, 0x13, 0xb3, 0x62, 0xfe, 0x9b, 0xf0, 0x01, 0xe4, 0x07, 0x19, 0x72, 0x5a, 0xd6, 0xa2,
-	0x29, 0x1f, 0x6f, 0x0f, 0xa9, 0xee, 0xd7, 0x84, 0xe1, 0x28, 0xd7, 0xfd, 0xb4, 0xed, 0x3f, 0x45,
-	0x06, 0x78, 0x0d, 0x97, 0x43, 0x34, 0x96, 0xfc, 0xe6, 0xaa, 0x33, 0x04, 0x50, 0xcf, 0x47, 0x16,
-	0x93, 0xe2, 0x47, 0x4f, 0xdf, 0x01, 0x00, 0x00, 0xff, 0xff, 0x72, 0x5f, 0xb6, 0x4a, 0xf1, 0x00,
-	0x00, 0x00,
+	// 190 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x44, 0x8f, 0x3b, 0xaa, 0xc3, 0x30,
+	0x10, 0x45, 0xd1, 0x7b, 0x52, 0xb0, 0xc7, 0x4d, 0x10, 0x0e, 0x88, 0x14, 0xc1, 0xa4, 0x72, 0x95,
+	0x26, 0x2b, 0x30, 0x4e, 0x63, 0x48, 0x11, 0x4c, 0x36, 0x60, 0x4b, 0x2a, 0x04, 0x42, 0x1a, 0x24,
+	0x35, 0x5e, 0x5b, 0x36, 0x17, 0xac, 0xfc, 0xaa, 0xe1, 0x9e, 0x3b, 0x67, 0x60, 0x60, 0x2b, 0x27,
+	0x6b, 0xd1, 0x1b, 0x97, 0xe2, 0x09, 0x83, 0x4f, 0x9e, 0xb3, 0x3c, 0x8e, 0x0f, 0x02, 0x65, 0xff,
+	0xe9, 0x38, 0x07, 0xda, 0xe3, 0xa0, 0x04, 0x69, 0x48, 0x5b, 0x8e, 0x54, 0xe2, 0xa0, 0x78, 0x0d,
+	0xec, 0x3a, 0xcd, 0xda, 0x8a, 0xbf, 0x0c, 0x99, 0x5d, 0xc3, 0xba, 0x79, 0x5f, 0x50, 0x8b, 0xff,
+	0x86, 0xb4, 0x6c, 0xa4, 0x69, 0x41, 0xbd, 0xb2, 0x41, 0x7a, 0x27, 0xe8, 0xcb, 0x36, 0xd2, 0x3b,
+	0x7e, 0x00, 0xe8, 0xe6, 0xd8, 0x29, 0x15, 0x74, 0x8c, 0xa2, 0xce, 0x0d, 0x4c, 0x5f, 0xc2, 0xf7,
+	0x50, 0xdc, 0x82, 0xf1, 0xc1, 0xa4, 0x45, 0xec, 0xf2, 0xad, 0x02, 0xdf, 0x99, 0x37, 0x50, 0x5d,
+	0x74, 0x94, 0xc1, 0x60, 0x32, 0xde, 0x89, 0x36, 0xcb, 0x95, 0xfa, 0xa1, 0x79, 0x93, 0x9f, 0x38,
+	0x3f, 0x03, 0x00, 0x00, 0xff, 0xff, 0x28, 0x9f, 0x57, 0x8e, 0xdf, 0x00, 0x00, 0x00,
 }
