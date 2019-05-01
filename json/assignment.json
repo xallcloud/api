@@ -1,0 +1,20 @@
+{
+    "asID": "UID-ASS-0000-0001",
+    "label": "Mario Phone",
+    "description": "Telefone que o Mario usa mais",
+    "cpID": "UID-1000-0000-0001",
+    "dvID": "UID-DEV-0000-0001",
+    "level": 1,
+    "settings": [
+        {
+            "name": "Setting1",
+            "value": "Value1",
+            "type": "string"
+        },
+        {
+            "name": "RetriesOnThisLevel",
+            "value": "2",
+            "type": "int"
+        }
+    ]
+}

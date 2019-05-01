@@ -1,20 +1,17 @@
 syntax = "proto3";
 
-package proto;
-
 import public "common.proto";
 
-message Device {
+package proto;
+
+message Assignment {
   // Common Types
-  string DvID  = 1;
+  string AsID  = 1;
   string Label = 2;
-  int32  Type  = 3;
-  string Icon  = 4;
-  // Specific types   
-  int32  Priority   = 20;
-  bool   IsTwoWay = 21;
-  string Category  = 22;
-  string Destination  = 23;
+  // Specific types 
+  string CpID  = 20;
+  string DvID  = 21;  
+  int32  Level = 22;
   repeated CommonSetting Settings = 24;  
   // More Generic Types
   string Description = 40;
