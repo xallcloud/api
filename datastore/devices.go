@@ -9,8 +9,6 @@ const (
 
 // Device contains the structure to match the devices Datastore records
 type Device struct {
-	// key
-	ID int64 // The integer ID used in the datastore.
 	// Stored data
 	DvID        string    `datastore:"dvID"`
 	Created     time.Time `datastore:"created"`
@@ -27,4 +25,6 @@ type Device struct {
 	Settings   string `datastore:"settings,noindex"`
 	Icon       string `datastore:"icon,noindex"`
 	RawRequest string `datastore:"rawRequest,noindex"`
+	// key
+	ID int64 `datastore:"-"` // The integer ID used in the datastore.
 }

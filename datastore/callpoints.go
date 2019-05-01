@@ -9,8 +9,6 @@ const (
 
 // Callpoint contains the structure to match the callpoints Datastore records
 type Callpoint struct {
-	// key
-	ID int64 // The integer ID used in the datastore.
 	// Stored data
 	CpID        string    `datastore:"cpID"`
 	Created     time.Time `datastore:"created"`
@@ -22,4 +20,6 @@ type Callpoint struct {
 	// no indexing
 	Icon       string `datastore:"icon,noindex"`
 	RawRequest string `datastore:"rawRequest,noindex"`
+	// key
+	ID int64 `datastore:"-"` // The integer ID used in the datastore.
 }
