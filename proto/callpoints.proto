@@ -4,7 +4,7 @@ package proto;
 
 message Callpoint {
   // Common Types
-  string CpId  = 1;
+  string CpID  = 1;
   string Label = 2;
   int32  Type  = 3;
   string Icon  = 4;
@@ -15,4 +15,7 @@ message Callpoint {
   
   // More Generic Types
   string Description = 40;
+
+  //Datastore Key
+  sint64 KeyID = 100;
 }
