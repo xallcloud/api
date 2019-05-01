@@ -1,0 +1,9 @@
+{
+    "cpID": "UID-0000-0000-0001",
+    "label": "Callpoint Label String",
+    "type": 1001,
+    "icon": "bucket.image.location.jpg",
+    "absAddress": "./site/facility/address",
+    "priority": 100,
+    "description": "additional description"
+}
