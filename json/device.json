@@ -1,0 +1,23 @@
+{
+    "dvID": "UID-DEV-0000-0001",
+    "label": "Mario Phone",
+    "type": 4001,
+    "icon": "https://storage.googleapis.com/xallcloud.appspot.com/mobile.png",
+    "priority": 1,
+    "description": "Telefone que o Mario usa mais",
+    "isTwoWay": true,
+    "category": "email",
+    "destination": "mariomedeiros@gmail.com",
+    "settings": [
+        {
+            "name": "Full Name",
+            "value": "Mario Rui Almeida Medeiros",
+            "type": "string"
+        },
+        {
+            "name": "Retries",
+            "value": "2",
+            "type": "int"
+        }
+    ]
+}

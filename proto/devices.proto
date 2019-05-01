@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package proto;
+
+message DeviceSetting {
+    string Name = 1;
+    string Value = 2;
+    string Type = 3;
+  }
+
+message Device {
+  // Common Types
+  string DvID  = 1;
+  string Label = 2;
+  int32  Type  = 3;
+  string Icon  = 4;
+  // Specific types   
+  int32  Priority   = 20;
+  bool   IsTwoWay = 21;
+  string Category  = 22;
+  string Destination  = 23;
+  repeated DeviceSetting Settings = 24;  
+  // More Generic Types
+  string Description = 40;
+  //Datastore Key
+  sint64 KeyID = 100;
+}
