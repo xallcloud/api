@@ -1,0 +1,51 @@
+{
+    "ntID": "UniqueID-For-This-Notification",
+    "evID": "UniqueID-For-The-Life-OF-the-Event",
+    "priority": 100,
+    "category": "email",
+    "destination": "mariomedeiros@gmail.com",
+    "message": "Callpoint Activation: HR High",
+    "responseTitle": "Please select one of these options",
+    "options": [
+        {
+            "option": "ack",
+            "label": "Confirmo que vou"
+        },
+        {
+            "option": "ignore",
+            "label": "Não posso"
+        }
+    ],
+    "callpoint": {
+        "cpID": "UID-0000-0000-0001",
+        "label": "HR High",
+        "type": 1001,
+        "icon": "bucket.image.location.jpg",
+        "absAddress": "./site/facility/address",
+        "priority": 100,
+        "description": "additional description"
+    },
+    "device": {
+        "dvID": "UID-DEV-0000-0001",
+        "label": "Mario Phone",
+        "type": 4001,
+        "icon": "https://storage.googleapis.com/xallcloud.appspot.com/mobile.png",
+        "priority": 1,
+        "description": "Telefone que o Mario usa mais",
+        "isTwoWay": true,
+        "category": "email",
+        "destination": "mariomedeiros@gmail.com",
+        "settings": [
+            {
+                "name": "Full Name",
+                "value": "Mario Rui Almeida Medeiros",
+                "type": "string"
+            },
+            {
+                "name": "Retries",
+                "value": "2",
+                "type": "int"
+            }
+        ]
+    }
+}

@@ -1,0 +1,59 @@
+[
+    {
+        "evID": "UniqueID-For-The-Life-OF-the-Event",
+        "ntID": "UniqueID-For-This-Notification",
+        "dvID": "UID-DEV-0000-0001",
+        "cpID": "UID-0000-0000-0001",
+        "visibility": "server",
+        "evType": "svcDelivered",
+        "evSubType": "ok",
+        "evDescription": "Message deliveverd to service",
+        "timestamp": "2011-07-14T19:43:37+0100"
+    },
+    {
+        "evID": "UniqueID-For-The-Life-OF-the-Event",
+        "ntID": "UniqueID-For-This-Notification",
+        "dvID": "UID-DEV-0000-0001",
+        "cpID": "UID-0000-0000-0001",
+        "visibility": "user",
+        "evType": "userDelivery",
+        "evSubType": "error",
+        "evDescription": "Failed to deliver message to user X",
+        "option": "ack",
+        "timestamp": "2011-07-14T19:43:37+0100"
+    },
+    {
+        "evID": "UniqueID-For-The-Life-OF-the-Event",
+        "ntID": "UniqueID-For-This-Notification",
+        "dvID": "UID-DEV-0000-0001",
+        "cpID": "UID-0000-0000-0001",
+        "visibility": "user",
+        "evType": "userDelivery",
+        "evSubType": "ok",
+        "evDescription": "Message deliverd to user X",
+        "option": "ack",
+        "timestamp": "2011-07-14T19:43:37+0100"
+    },
+    {
+        "evID": "UniqueID-For-The-Life-OF-the-Event",
+        "ntID": "UniqueID-For-This-Notification",
+        "dvID": "UID-DEV-0000-0001",
+        "cpID": "UID-0000-0000-0001",
+        "visibility": "user",
+        "evType": "userResponse",
+        "evSubType": "ack",
+        "evDescription": "User selected option 'Confrimo que vou'",
+        "timestamp": "2011-07-14T19:43:37+0100"
+    },
+    {
+        "evID": "UniqueID-For-The-Life-OF-the-Event",
+        "ntID": "UniqueID-For-This-Notification",
+        "dvID": "UID-DEV-0000-0001",
+        "cpID": "UID-0000-0000-0001",
+        "visibility": "user",
+        "evType": "event",
+        "evSubType": "terminated",
+        "evDescription": "All parties were notified. Terminating event",
+        "timestamp": "2011-07-14T19:43:37+0100"
+    }
+]

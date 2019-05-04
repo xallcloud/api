@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package proto;
+
+message ActionCallpoint {
+  // Common Types
+  string AcID  = 1;
+  // Specific types 
+  string CpID  = 20;
+  string Action  = 21;    
+  // More Generic Types
+  string Description = 40;
+  //Datastore Key
+  sint64 KeyID = 100;
+}
