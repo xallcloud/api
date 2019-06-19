@@ -9,23 +9,19 @@ const (
 
 // Assignment contains the structure to match the devices Datastore records
 type Assignment struct {
-	// Stored data
-	AsID        string    `datastore:"asID"`
-	Created     time.Time `datastore:"created"`
-	Changed     time.Time `datastore:"changed"`
-	Description string    `datastore:"description"`
-
-	CpID string `datastore:"cpID"`
-	DvID string `datastore:"dvID"`
-
-	Level int32 `datastore:"level"`
-
-	// no indexing
-	Settings   string `datastore:"settings,noindex"`
-	RawRequest string `datastore:"rawRequest,noindex"`
 	// key
 	ID int64 `datastore:"-"` // The integer ID used in the datastore.
-
+	// Stored data
+	AsID        string    `datastore:"asID"`
+	DvID        string    `datastore:"dvID"`
+	CpID        string    `datastore:"cpID"`
+	Description string    `datastore:"description"`
+	Level       int32     `datastore:"level"`
+	Created     time.Time `datastore:"created"`
+	Changed     time.Time `datastore:"changed"`
+	RawRequest  string    `datastore:"rawRequest,noindex"`
+	//Settings    string    `datastore:"settings,noindex"`
+	// Query information
 	CallpointObj Callpoint `datastore:"-"`
 	DeviceObj    Device    `datastore:"-"`
 }

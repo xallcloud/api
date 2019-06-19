@@ -9,22 +9,20 @@ const (
 
 // Device contains the structure to match the devices Datastore records
 type Device struct {
-	// Stored data
-	DvID        string    `datastore:"dvID"`
-	Created     time.Time `datastore:"created"`
-	Label       string    `datastore:"label"`
-	Description string    `datastore:"description"`
-	Type        int32     `datastore:"type"`
-
-	Priority    int32  `datastore:"priority"`
-	IsTwoWay    bool   `datastore:"isTwoWay"`
-	Category    string `datastore:"category"`
-	Destination string `datastore:"destination"`
-
-	// no indexing
-	Settings   string `datastore:"settings,noindex"`
-	Icon       string `datastore:"icon,noindex"`
-	RawRequest string `datastore:"rawRequest,noindex"`
 	// key
 	ID int64 `datastore:"-"` // The integer ID used in the datastore.
+	// Stored data
+	DvID        string    `datastore:"dvID"`
+	Label       string    `datastore:"label"`
+	Type        int32     `datastore:"type"`
+	Icon        string    `datastore:"icon,noindex"`
+	Description string    `datastore:"description"`
+	IsTwoWay    bool      `datastore:"isTwoWay"`
+	Category    string    `datastore:"category"`
+	Destination string    `datastore:"destination"`
+	Priority    int32     `datastore:"priority"`
+	Created     time.Time `datastore:"created"`
+	Changed     time.Time `datastore:"changed"`
+	Settings    string    `datastore:"settings,noindex"`
+	RawRequest  string    `datastore:"rawRequest,noindex"`
 }
