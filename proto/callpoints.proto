@@ -3,16 +3,13 @@ syntax = "proto3";
 package proto;
 
 message Callpoint {
-  // Common Types
   string CpID  = 1;
   string Label = 2;
   int32  Type  = 3;
-  string Icon  = 4;  
-  // Specific types
-  string AbsAddress = 20;   
-  int32  Priority   = 21;  
-  // More Generic Types
-  string Description = 40;
-  //Datastore Key
+  string Icon  = 4;
+  string Description = 5;
+  int32  Priority    = 6;  
+  string AbsAddress  = 7;   
+  
   sint64 KeyID = 100;
 }

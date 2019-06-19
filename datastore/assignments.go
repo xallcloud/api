@@ -20,7 +20,7 @@ type Assignment struct {
 	Created     time.Time `datastore:"created"`
 	Changed     time.Time `datastore:"changed"`
 	RawRequest  string    `datastore:"rawRequest,noindex"`
-	//Settings    string    `datastore:"settings,noindex"`
+	Settings    string    `datastore:"settings,noindex"`
 	// Query information
 	CallpointObj Callpoint `datastore:"-"`
 	DeviceObj    Device    `datastore:"-"`

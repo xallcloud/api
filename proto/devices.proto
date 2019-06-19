@@ -10,14 +10,12 @@ message Device {
   string Label = 2;
   int32  Type  = 3;
   string Icon  = 4;
-  // Specific types   
-  int32  Priority   = 20;
-  bool   IsTwoWay = 21;
-  string Category  = 22;
-  string Destination  = 23;
-  repeated CommonSetting Settings = 24;  
-  // More Generic Types
-  string Description = 40;
+  string Description = 5;
+  bool   IsTwoWay = 6;
+  string Category  = 7;
+  string Destination  = 8; 
+  int32  Priority   = 9;  
+  repeated CommonSetting Settings = 10;  
   //Datastore Key
   sint64 KeyID = 100;
 }
