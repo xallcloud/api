@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package proto;
+
+message Event {
+  string EvID  = 1;
+  string NtID  = 2;
+  string CpID  = 3;
+  string DvID  = 4;
+  string Visibility = 5;
+  string EvType = 6;
+  string EvSubType = 7;
+  string EvDescription = 8;
+  
+  sint64 KeyID = 100;
+}

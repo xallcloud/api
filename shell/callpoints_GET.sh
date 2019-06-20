@@ -21,7 +21,7 @@ curl -i -H "Accept: application/json" "https://xallcloud.appspot.com/api/callpoi
 
 echo -e "\n"
 echo -e "-----------------------------------------------------------------------------------------------------"
-echo -e "  DEVICES GET: https://xallcloud.appspot.com/api/devices "
+echo -e "  3) DEVICES GET: https://xallcloud.appspot.com/api/devices "
 echo -e "-----------------------------------------------------------------------------------------------------"
 
 
@@ -31,7 +31,7 @@ curl -i -H "Accept: application/json" "https://xallcloud.appspot.com/api/devices
 
 echo -e "\n"
 echo -e "-----------------------------------------------------------------------------------------------------"
-echo -e "  ASSIGNMENTS GET: https://xallcloud.appspot.com/api/assignments/callpoint/UID-1000-0000-0001 "
+echo -e "  4) ASSIGNMENTS GET: https://xallcloud.appspot.com/api/assignments/callpoint/UID-1000-0000-0001 "
 echo -e "-----------------------------------------------------------------------------------------------------"
 
 
@@ -42,12 +42,35 @@ curl -i -H "Accept: application/json" "https://xallcloud.appspot.com/api/assignm
 
 echo -e "\n"
 echo -e "-----------------------------------------------------------------------------------------------------"
-echo -e "  ACTIONS GET: https://xallcloud.appspot.com/api/actions "
+echo -e "  5) ACTIONS GET: https://xallcloud.appspot.com/api/actions "
 echo -e "-----------------------------------------------------------------------------------------------------"
 
 
 
 curl -i -H "Accept: application/json" "https://xallcloud.appspot.com/api/actions"
+
+
+
+
+echo -e "\n"
+echo -e "-----------------------------------------------------------------------------------------------------"
+echo -e "  6) EVENTS GET: https://xallcloud.appspot.com/api/events "
+echo -e "-----------------------------------------------------------------------------------------------------"
+
+
+
+curl -i -H "Accept: application/json" "https://xallcloud.appspot.com/api/events"
+
+
+
+echo -e "\n"
+echo -e "-----------------------------------------------------------------------------------------------------"
+echo -e "  7) EVENTS GET: https://xallcloud.appspot.com/api/events/callpoint/UID-1000-0000-0001 "
+echo -e "-----------------------------------------------------------------------------------------------------"
+
+
+
+curl -i -H "Accept: application/json" "https://xallcloud.appspot.com/api/events/callpoint/UID-1000-0000-0001"
 
 
 
