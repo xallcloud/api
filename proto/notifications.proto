@@ -4,7 +4,7 @@ package proto;
 
 message Notification {
   string NtID  = 1;
-  string EvID = 2;
+  string AcID = 2;
   int32  Priority  = 3;
   string Category  = 4;
   string Description = 5;
