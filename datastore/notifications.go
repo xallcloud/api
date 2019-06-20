@@ -7,8 +7,8 @@ const (
 	KindNotifications = "notifications"
 )
 
-// Notifications contains the structure to match the notifications Datastore records
-type Notifications struct {
+// Notification contains the structure to match the notifications Datastore records
+type Notification struct {
 	// key
 	ID int64 `datastore:"-"` // The integer ID used in the datastore.
 	// Stored data
