@@ -5,7 +5,6 @@ package proto;
 import public "common.proto";
 
 message Device {
-  // Common Types
   string DvID  = 1;
   string Label = 2;
   int32  Type  = 3;

@@ -20,14 +20,11 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-type ActionCallpoint struct {
-	// Common Types
-	AcID string `protobuf:"bytes,1,opt,name=AcID,json=acID,proto3" json:"AcID,omitempty"`
-	// Specific types
-	CpID   string `protobuf:"bytes,20,opt,name=CpID,json=cpID,proto3" json:"CpID,omitempty"`
-	Action string `protobuf:"bytes,21,opt,name=Action,json=action,proto3" json:"Action,omitempty"`
-	// More Generic Types
-	Description string `protobuf:"bytes,40,opt,name=Description,json=description,proto3" json:"Description,omitempty"`
+type Action struct {
+	AcID        string `protobuf:"bytes,1,opt,name=AcID,json=acID,proto3" json:"AcID,omitempty"`
+	CpID        string `protobuf:"bytes,2,opt,name=CpID,json=cpID,proto3" json:"CpID,omitempty"`
+	Action      string `protobuf:"bytes,3,opt,name=Action,json=action,proto3" json:"Action,omitempty"`
+	Description string `protobuf:"bytes,4,opt,name=Description,json=description,proto3" json:"Description,omitempty"`
 	// Datastore Key
 	KeyID                int64    `protobuf:"zigzag64,100,opt,name=KeyID,json=keyID,proto3" json:"KeyID,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -35,60 +32,60 @@ type ActionCallpoint struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *ActionCallpoint) Reset()         { *m = ActionCallpoint{} }
-func (m *ActionCallpoint) String() string { return proto.CompactTextString(m) }
-func (*ActionCallpoint) ProtoMessage()    {}
-func (*ActionCallpoint) Descriptor() ([]byte, []int) {
+func (m *Action) Reset()         { *m = Action{} }
+func (m *Action) String() string { return proto.CompactTextString(m) }
+func (*Action) ProtoMessage()    {}
+func (*Action) Descriptor() ([]byte, []int) {
 	return fileDescriptor_eeb49063df94c2b8, []int{0}
 }
 
-func (m *ActionCallpoint) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ActionCallpoint.Unmarshal(m, b)
+func (m *Action) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Action.Unmarshal(m, b)
 }
-func (m *ActionCallpoint) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ActionCallpoint.Marshal(b, m, deterministic)
+func (m *Action) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Action.Marshal(b, m, deterministic)
 }
-func (m *ActionCallpoint) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ActionCallpoint.Merge(m, src)
+func (m *Action) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Action.Merge(m, src)
 }
-func (m *ActionCallpoint) XXX_Size() int {
-	return xxx_messageInfo_ActionCallpoint.Size(m)
+func (m *Action) XXX_Size() int {
+	return xxx_messageInfo_Action.Size(m)
 }
-func (m *ActionCallpoint) XXX_DiscardUnknown() {
-	xxx_messageInfo_ActionCallpoint.DiscardUnknown(m)
+func (m *Action) XXX_DiscardUnknown() {
+	xxx_messageInfo_Action.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ActionCallpoint proto.InternalMessageInfo
+var xxx_messageInfo_Action proto.InternalMessageInfo
 
-func (m *ActionCallpoint) GetAcID() string {
+func (m *Action) GetAcID() string {
 	if m != nil {
 		return m.AcID
 	}
 	return ""
 }
 
-func (m *ActionCallpoint) GetCpID() string {
+func (m *Action) GetCpID() string {
 	if m != nil {
 		return m.CpID
 	}
 	return ""
 }
 
-func (m *ActionCallpoint) GetAction() string {
+func (m *Action) GetAction() string {
 	if m != nil {
 		return m.Action
 	}
 	return ""
 }
 
-func (m *ActionCallpoint) GetDescription() string {
+func (m *Action) GetDescription() string {
 	if m != nil {
 		return m.Description
 	}
 	return ""
 }
 
-func (m *ActionCallpoint) GetKeyID() int64 {
+func (m *Action) GetKeyID() int64 {
 	if m != nil {
 		return m.KeyID
 	}
@@ -96,21 +93,20 @@ func (m *ActionCallpoint) GetKeyID() int64 {
 }
 
 func init() {
-	proto.RegisterType((*ActionCallpoint)(nil), "proto.ActionCallpoint")
+	proto.RegisterType((*Action)(nil), "proto.Action")
 }
 
 func init() { proto.RegisterFile("actions.proto", fileDescriptor_eeb49063df94c2b8) }
 
 var fileDescriptor_eeb49063df94c2b8 = []byte{
-	// 151 bytes of a gzipped FileDescriptorProto
+	// 140 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0xe2, 0x4d, 0x4c, 0x2e, 0xc9,
-	0xcc, 0xcf, 0x2b, 0xd6, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0x62, 0x05, 0x53, 0x4a, 0x9d, 0x8c,
-	0x5c, 0xfc, 0x8e, 0x60, 0x09, 0xe7, 0xc4, 0x9c, 0x9c, 0x82, 0xfc, 0xcc, 0xbc, 0x12, 0x21, 0x21,
-	0x2e, 0x16, 0xc7, 0x64, 0x4f, 0x17, 0x09, 0x46, 0x05, 0x46, 0x0d, 0xce, 0x20, 0x96, 0xc4, 0x64,
-	0x4f, 0x17, 0x90, 0x98, 0x73, 0x81, 0xa7, 0x8b, 0x84, 0x08, 0x44, 0x2c, 0xb9, 0xc0, 0xd3, 0x45,
-	0x48, 0x8c, 0x8b, 0x0d, 0xa2, 0x55, 0x42, 0x14, 0x2c, 0xca, 0x06, 0xb1, 0x41, 0x48, 0x81, 0x8b,
-	0xdb, 0x25, 0xb5, 0x38, 0xb9, 0x28, 0xb3, 0x00, 0x2c, 0xa9, 0x01, 0x96, 0xe4, 0x4e, 0x41, 0x08,
-	0x09, 0x89, 0x70, 0xb1, 0x7a, 0xa7, 0x56, 0x7a, 0xba, 0x48, 0xa4, 0x28, 0x30, 0x6a, 0x08, 0x05,
-	0xb1, 0x66, 0x83, 0x38, 0x49, 0x6c, 0x60, 0x27, 0x19, 0x03, 0x02, 0x00, 0x00, 0xff, 0xff, 0xc5,
-	0x3d, 0xb9, 0x3d, 0xaa, 0x00, 0x00, 0x00,
+	0xcc, 0xcf, 0x2b, 0xd6, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0x62, 0x05, 0x53, 0x4a, 0x0d, 0x8c,
+	0x5c, 0x6c, 0x8e, 0x60, 0x09, 0x21, 0x21, 0x2e, 0x16, 0xc7, 0x64, 0x4f, 0x17, 0x09, 0x46, 0x05,
+	0x46, 0x0d, 0xce, 0x20, 0x96, 0xc4, 0x64, 0x4f, 0x17, 0x90, 0x98, 0x73, 0x81, 0xa7, 0x8b, 0x04,
+	0x13, 0x44, 0x2c, 0xb9, 0xc0, 0xd3, 0x45, 0x48, 0x0c, 0xa6, 0x43, 0x82, 0x19, 0x2c, 0xca, 0x06,
+	0x31, 0x58, 0x48, 0x81, 0x8b, 0xdb, 0x25, 0xb5, 0x38, 0xb9, 0x28, 0xb3, 0x00, 0x2c, 0xc9, 0x02,
+	0x96, 0xe4, 0x4e, 0x41, 0x08, 0x09, 0x89, 0x70, 0xb1, 0x7a, 0xa7, 0x56, 0x7a, 0xba, 0x48, 0xa4,
+	0x28, 0x30, 0x6a, 0x08, 0x05, 0xb1, 0x66, 0x83, 0x38, 0x49, 0x6c, 0x60, 0x97, 0x18, 0x03, 0x02,
+	0x00, 0x00, 0xff, 0xff, 0xbf, 0x4b, 0xf9, 0x96, 0xa1, 0x00, 0x00, 0x00,
 }

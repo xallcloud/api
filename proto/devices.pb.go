@@ -21,7 +21,6 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type Device struct {
-	// Common Types
 	DvID        string           `protobuf:"bytes,1,opt,name=DvID,json=dvID,proto3" json:"DvID,omitempty"`
 	Label       string           `protobuf:"bytes,2,opt,name=Label,json=label,proto3" json:"Label,omitempty"`
 	Type        int32            `protobuf:"varint,3,opt,name=Type,json=type,proto3" json:"Type,omitempty"`

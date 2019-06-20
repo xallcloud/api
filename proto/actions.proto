@@ -2,14 +2,11 @@ syntax = "proto3";
 
 package proto;
 
-message ActionCallpoint {
-  // Common Types
+message Action {
   string AcID  = 1;
-  // Specific types 
-  string CpID  = 20;
-  string Action  = 21;    
-  // More Generic Types
-  string Description = 40;
+  string CpID  = 2;
+  string Action  = 3;    
+  string Description = 4;
   //Datastore Key
   sint64 KeyID = 100;
 }
