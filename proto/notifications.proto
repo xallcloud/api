@@ -7,13 +7,10 @@ message Notification {
   string AcID = 2;
   int32  Priority  = 3;
   string Category  = 4;
-  string Description = 5;
+  string Destination = 5;
   string Message  = 6;   
   string ResponseTitle  = 7;
   string Options  = 8;
-  string EvSubType  = 9;
-  string AbsAddress  = 10;
-  string EvDescription  = 11;
   
   sint64 KeyID = 100;
 }
