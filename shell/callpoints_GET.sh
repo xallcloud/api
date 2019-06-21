@@ -76,6 +76,17 @@ curl -i -H "Accept: application/json" "https://xallcloud.appspot.com/api/events/
 
 echo -e "\n"
 echo -e "-----------------------------------------------------------------------------------------------------"
+echo -e "  8) EVENTS GET: https://xallcloud.appspot.com/api/events/action/UID-ACT-0000-0001 "
+echo -e "-----------------------------------------------------------------------------------------------------"
+
+
+
+curl -i -H "Accept: application/json" "https://xallcloud.appspot.com/api/events/action/UID-ACT-0000-0001"
+
+
+
+echo -e "\n"
+echo -e "-----------------------------------------------------------------------------------------------------"
 echo -e "  100) GET API VERSION : https://xallcloud.appspot.com/api/version"
 echo -e "-----------------------------------------------------------------------------------------------------"
 
