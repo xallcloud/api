@@ -1,0 +1,8 @@
+indexes:
+
+- kind: events
+  ancestor: no
+  properties:
+  - name: ntID
+  - name: created
+    direction: asc
