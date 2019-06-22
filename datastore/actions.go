@@ -3,7 +3,7 @@ package datastore
 import "time"
 
 const (
-	// KindActions represents the "table" name (Kind) to store Devices
+	// KindActions represents the "table" name (Kind) to store Actions
 	KindActions = "actions"
 )
 

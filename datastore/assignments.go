@@ -7,7 +7,7 @@ const (
 	KindAssignments = "assignments"
 )
 
-// Assignment contains the structure to match the devices Datastore records
+// Assignment contains the structure to match the assignments Datastore records
 type Assignment struct {
 	// key
 	ID int64 `datastore:"-"` // The integer ID used in the datastore.
