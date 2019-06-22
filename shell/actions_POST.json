@@ -1,6 +1,6 @@
 {
-  "acID": "UID-ACT-NEW-0004",
+  "acID": "UID-ACT-NEW-0005",
   "cpID": "UID-1000-0000-0001",
   "action": "activate",
-  "description": "Activate Callpoint test 4 with simulation"
+  "description": "Activate Callpoint test 5 with advanced simulator"
 }
