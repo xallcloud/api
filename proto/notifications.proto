@@ -11,6 +11,9 @@ message Notification {
   string Message  = 6;   
   string ResponseTitle  = 7;
   string Options  = 8;
+  //extra information to fill events
+  string cpID = 9;
+  string dvID = 10;
   
   sint64 KeyID = 100;
 }
