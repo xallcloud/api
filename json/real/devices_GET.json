@@ -1,0 +1,99 @@
+[
+    {
+        "ID": 5636953047302144,
+        "dvID": "UID-DEV-1000-0003",
+        "label": "Rui Phone",
+        "type": 4001,
+        "icon": "https://storage.googleapis.com/xallcloud.appspot.com/mobile.png",
+        "description": "Telefone que o Rui usa mais",
+        "isTwoWay": true,
+        "category": "email",
+        "destination": "mario.medeiros@gmail.com",
+        "priority": 1,
+        "created": "2019-05-01 15:47:19.071584 +0000 UTC",
+        "changed": "0001-01-01 00:00:00 +0000 UTC",
+        "settings": [
+            {
+                "name": "Retries",
+                "value": "2",
+                "type": "int"
+            }
+        ],
+        "rawRequest": {
+            "dvID": "UID-DEV-1000-0003",
+            "label": "Rui Phone",
+            "type": 4001,
+            "icon": "https://storage.googleapis.com/xallcloud.appspot.com/mobile.png",
+            "priority": 1,
+            "isTwoWay": true,
+            "category": "email",
+            "destination": "mario.medeiros@gmail.com",
+            "settings": [
+                {
+                    "name": "Retries",
+                    "value": "2",
+                    "type": "int"
+                }
+            ],
+            "description": "Telefone que o Rui usa mais"
+        }
+    },
+    {
+        "ID": 5630742793027584,
+        "dvID": "UID-DEV-1000-0002",
+        "label": "Mario Phone",
+        "type": 4001,
+        "icon": "https://storage.googleapis.com/xallcloud.appspot.com/mobile.png",
+        "description": "Telefone que o Mario usa mais",
+        "isTwoWay": true,
+        "category": "email",
+        "destination": "mariomedeiros@gmail.com",
+        "priority": 1,
+        "created": "2019-05-01 15:50:40.188608 +0000 UTC",
+        "changed": "0001-01-01 00:00:00 +0000 UTC",
+        "settings": [
+            {
+                "name": "Full Name",
+                "value": "Rui Rui Almeida Medeiros",
+                "type": "string"
+            },
+            {
+                "name": "Retries",
+                "value": "2",
+                "type": "int"
+            },
+            {
+                "name": "New Thing",
+                "value": "Will not have a type",
+                "type": ""
+            }
+        ],
+        "rawRequest": {
+            "dvID": "UID-DEV-1000-0002",
+            "label": "Mario Phone",
+            "type": 4001,
+            "icon": "https://storage.googleapis.com/xallcloud.appspot.com/mobile.png",
+            "priority": 1,
+            "isTwoWay": true,
+            "category": "email",
+            "destination": "mariomedeiros@gmail.com",
+            "settings": [
+                {
+                    "name": "Full Name",
+                    "value": "Rui Rui Almeida Medeiros",
+                    "type": "string"
+                },
+                {
+                    "name": "Retries",
+                    "value": "2",
+                    "type": "int"
+                },
+                {
+                    "name": "New Thing",
+                    "value": "Will not have a type"
+                }
+            ],
+            "description": "Telefone que o Mario usa mais"
+        }
+    }
+]

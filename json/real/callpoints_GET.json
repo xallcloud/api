@@ -1,0 +1,65 @@
+[
+    {
+        "ID": 5634472569470976,
+        "cpID": "UID-1000-0000-0001",
+        "label": "HR High",
+        "type": 1001,
+        "icon": "bucket.image.hr.jpg",
+        "description": "Room 101, ICU / GE monitor",
+        "priority": 50,
+        "absAddress": "./Hospital-Lisboa/ICU/101/GE-HR-HIGH",
+        "created": "2019-05-01 10:18:00 +0000 UTC",
+        "changed": "0001-01-01 00:00:00 +0000 UTC",
+        "rawRequest": {
+            "cpID": "UID-1000-0000-0001",
+            "label": "HR High",
+            "type": 1001,
+            "icon": "bucket.image.hr.jpg",
+            "absAddress": "./Hospital-Lisboa/ICU/101/GE-HR-HIGH",
+            "priority": 50,
+            "description": "Room 101, ICU / GE monitor"
+        }
+    },
+    {
+        "ID": 5646874153320448,
+        "cpID": "UID-1000-0000-0002",
+        "label": "HR Low",
+        "type": 1001,
+        "icon": "bucket.image.hr-low.jpg",
+        "description": "Room 101, ICU / GE monitor",
+        "priority": 50,
+        "absAddress": "./Hospital-Lisboa/ICU/101/GE-HR-LOW",
+        "created": "2019-05-01 15:49:23.340379 +0000 UTC",
+        "changed": "0001-01-01 00:00:00 +0000 UTC",
+        "rawRequest": {
+            "cpID": "UID-1000-0000-0002",
+            "label": "HR Low",
+            "type": 1001,
+            "icon": "bucket.image.hr-low.jpg",
+            "absAddress": "./Hospital-Lisboa/ICU/101/GE-HR-LOW",
+            "priority": 50,
+            "description": "Room 101, ICU / GE monitor"
+        }
+    },
+    {
+        "ID": 5635703144710144,
+        "cpID": "UID-0000-0000-1001",
+        "label": "Ponto de Chamada",
+        "type": 1001,
+        "icon": "bucket.image.location.jpg",
+        "description": "Hospital de Lisboa",
+        "priority": 100,
+        "absAddress": "./site/facility/address",
+        "created": "2019-05-05 21:27:13.784444 +0000 UTC",
+        "changed": "0001-01-01 00:00:00 +0000 UTC",
+        "rawRequest": {
+            "cpID": "UID-0000-0000-1001",
+            "label": "Ponto de Chamada",
+            "type": 1001,
+            "icon": "bucket.image.location.jpg",
+            "absAddress": "./site/facility/address",
+            "priority": 100,
+            "description": "Hospital de Lisboa"
+        }
+    }
+]
